@@ -1,1 +1,2 @@
-from epydemic_app import *
+from parameter_estimation import *
+import epydemic_app

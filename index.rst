@@ -6,7 +6,9 @@
 Welcome to epydemic's documentation!
 ====================================
 
-.. autofunction:: epydemic.show
+.. autofunction:: epydemic.ols
+
+.. autofunction:: epydemic.epydemic_app.show
 
 Contents:
 
