@@ -3,7 +3,7 @@ import pyqtgraph as pg
 import pyqtgraph.parametertree.parameterTypes as pTypes
 from pyqtgraph.parametertree import Parameter, ParameterTree, ParameterItem, registerParameterType
 
-def show():    
+def show():
     ## Always start by initializing Qt (only once per application)
     app = QtGui.QApplication([])
 
@@ -53,10 +53,10 @@ def show():
         S0=p['S0']
         I0=p['I0']
         INPUT = (S0, I0, 0.0)
-        def diff_eqs(INP,t):  
+        def diff_eqs(INP,t):
             '''The main set of equations'''
             Y=np.zeros((3))
-            V = INP    
+            V = INP
             Y[0] = - beta * V[0] * V[1]
             Y[1] = beta * V[0] * V[1] - gamma * V[1]
             Y[2] = gamma * V[1]
