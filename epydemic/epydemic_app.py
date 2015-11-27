@@ -4,6 +4,9 @@ import pyqtgraph.parametertree.parameterTypes as pTypes
 from pyqtgraph.parametertree import Parameter, ParameterTree, ParameterItem, registerParameterType
 
 def show():
+    """
+    Show epydemic GUI application.
+    """
     ## Always start by initializing Qt (only once per application)
     app = QtGui.QApplication([])
 

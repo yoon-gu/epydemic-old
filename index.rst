@@ -6,6 +6,8 @@
 Welcome to epydemic's documentation!
 ====================================
 
+.. autofunction:: epydemic.show
+
 Contents:
 
 .. toctree::
