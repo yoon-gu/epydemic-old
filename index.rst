@@ -8,8 +8,6 @@ Welcome to epydemic's documentation!
 
 .. autofunction:: epydemic.ols
 
-.. autofunction:: epydemic.epydemic_app.show
-
 Contents:
 
 .. toctree::
