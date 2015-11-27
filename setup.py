@@ -12,7 +12,7 @@ setup(	name='epydemic', version='0.0',
 		license='MIT',
 		packages=find_packages(),
 		install_requires=[
-		'pyqtgraph',
+			'pyqtgraph',
 		],
 		include_package_data=True,
 		distclass=BinaryDistribution,
