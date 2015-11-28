@@ -3,21 +3,39 @@
 Installation
 ============
 
-.. note:: upgrading from 0.8.7? Checkout :ref:`upgrading`.
-
-
-Getting the latest release
---------------------------
-lorem saldf	::
-
-    $ pip install django-filer
-
-If you are feeling adventurous you can get
+.. warning:: No support ``python 3.x``.
 
 Dependencies
 ------------
 
-``django.contrib.staticfiles`` is required.
+http://thenilblog.blogspot.kr/2015/01/install-pyqt-on-yosemite.html
+
+#. Install Qt
+
+	* run ``brew install qt``
+
+#. Install SIP
+
+	* run ``download SIP``
+	* run ``python configure.py``
+	* run ``make``
+	* run ``sudo make install``
+
+#. Install PyQt4
+
+	* run ``download PyQt4``
+	* run ``python configure.py``
+	* run ``make``
+	* run ``sudo make install``
+
+#. Install pyqtgraph
+
+	* run ``Download pyqtgraph``
+	* run ``python setup.py install``
+
+#. Install pyopengl
+
+	* run ``sudo pip install pyopengl``
 
 
 Configuration
