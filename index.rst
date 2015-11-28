@@ -12,6 +12,9 @@ Welcome to epydemic's documentation!
 .. automodule:: epydemic.estimations
    :members:
 
+.. automodule:: epydemic.epydemic_app
+   :members:
+
 Contents:
 
 .. toctree::
