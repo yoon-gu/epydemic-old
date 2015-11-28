@@ -5,8 +5,14 @@ Installation
 
 .. warning:: No support ``python 3.x``.
 
-Dependencies
-------------
+Windows
+-------
+TBA
+
+Mac OS X(Unofficial)
+--------------------
+
+.. warning:: This support is `unofficial`.
 
 http://thenilblog.blogspot.kr/2015/01/install-pyqt-on-yosemite.html
 
@@ -36,16 +42,3 @@ http://thenilblog.blogspot.kr/2015/01/install-pyqt-on-yosemite.html
 #. Install pyopengl
 
 	* run ``sudo pip install pyopengl``
-
-
-Configuration
--------------
-
-Add ``"filer"`` and related apps to your project's ``INSTALLED_APPS`` setting and run ``manage.py syncdb``.::
-
-    INSTALLED_APPS = [
-        ...
-        'filer',
-        'easy_thumbnails',
-        ...
-    ]
