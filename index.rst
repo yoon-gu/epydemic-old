@@ -6,18 +6,11 @@
 Welcome to epydemic's documentation!
 ====================================
 
-SIR Model :
+.. automodule:: epydemic.models
+   :members:
 
-.. math::
-	\begin{align*} 
-		S' &= -\beta S I \\ 
-		I' &= \beta S I - \gamma I \\
-		R' &= \gamma I
-	\end{align*}	
-
-.. autofunction:: epydemic.ols
-
-.. autofunction:: epydemic.epydemic_app.show
+.. automodule:: epydemic.estimations
+   :members:
 
 Contents:
 
