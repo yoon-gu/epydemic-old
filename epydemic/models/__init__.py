@@ -46,6 +46,6 @@ module_level_variable : int
 
 """
 
-__all__ = ['sir', 'seir']
+__all__ = ['sir', 'seir', 'model']
 
-from models import sir, seir
+from models import sir, seir, model

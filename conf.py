@@ -302,5 +302,5 @@ class Mock(MagicMock):
             return Mock()
 
 MOCK_MODULES = ['PyQt4', 'pyqtgraph', 'pyqtgraph.parametertree', 
-                'pyqtgraph.parametertree.parameterTypes', 'numpy']
+                'pyqtgraph.parametertree.parameterTypes', 'numpy', 'scipy', 'scipy.integrate']
 sys.modules.update((mod_name, Mock()) for mod_name in MOCK_MODULES)
