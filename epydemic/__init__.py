@@ -14,8 +14,6 @@ inventore doloribus dolor perferendis cupiditate nobis.
 """
 __author__ = ("Jacob Hwang <jacob@dnry.org>")
 
-__all__ = ["ols", "gls", "sir", "seir"]
+__all__ = ["models", "estimations", "epydemic_app"]
 
-from models import sir, seir
-from estimations import ols, gls
-import epydemic_app
+import models, estimations, epydemic_app
