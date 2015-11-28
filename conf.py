@@ -300,5 +300,5 @@ class Mock(MagicMock):
     def __getattr__(cls, name):
             return Mock()
 
-MOCK_MODULES = ['PyQt4', 'pyqtgraph', 'numpy']
+MOCK_MODULES = ['PyQt4', 'pyqtgraph', 'pyqtgraph.parametertree.parameterTypes', 'numpy']
 sys.modules.update((mod_name, Mock()) for mod_name in MOCK_MODULES)
