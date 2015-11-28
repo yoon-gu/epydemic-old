@@ -3,6 +3,8 @@ def sir():
 	SIR model: 
 
 	.. math::
+		:nowrap:
+
 		\begin{align*} 
 			S' &= -\beta S I \\
 			I' &= \beta S I - \gamma I \\
@@ -16,6 +18,8 @@ def seir():
 	SEIR Model:
 
 	.. math::
+		:nowrap:
+		
 		\begin{align*}
 			S' &= \mu N - \mu S - \beta \frac{I}{N} S \\
 			E' &= \beta \frac{I}{N} S - (\mu +a ) E \\
