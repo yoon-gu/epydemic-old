@@ -18,6 +18,7 @@ Epydemic
 .. automodule:: epydemic.epydemic_app
    :members:
 
+
 Contents:
 
 .. toctree::

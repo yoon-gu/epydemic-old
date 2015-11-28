@@ -14,7 +14,10 @@ def sir(gamma = 0.1, beta = 0.5):
 	Args:
 	    gamma (float): Description of gamma
 	    beta (float): Description of beta
-
+	
+	Example
+	-------
+	This is just a quick example.
 	"""
 	print "SIR Model"
 
