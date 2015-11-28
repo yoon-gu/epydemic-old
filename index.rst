@@ -6,6 +6,9 @@
 Welcome to epydemic's documentation!
 ====================================
 
+.. automodule:: epydemic
+   :members:
+
 .. automodule:: epydemic.models
    :members:
 
