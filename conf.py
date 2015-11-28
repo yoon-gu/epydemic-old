@@ -292,3 +292,13 @@ texinfo_documents = [
 
 # If true, do not generate a @detailmenu in the "Top" node's menu.
 #texinfo_no_detailmenu = False
+
+from mock import Mock as MagicMock
+
+class Mock(MagicMock):
+    @classmethod
+    def __getattr__(cls, name):
+            return Mock()
+
+MOCK_MODULES = ['PyQt4', 'pyqtgraph', 'numpy']
+sys.modules.update((mod_name, Mock()) for mod_name in MOCK_MODULES)
