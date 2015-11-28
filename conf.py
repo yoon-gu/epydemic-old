@@ -31,14 +31,15 @@ sys.path.append(os.path.abspath('.'))
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
 extensions = [
-				# 'matplotlib.sphinxext.only_directives',
-				# 'matplotlib.sphinxext.plot_directive',
-				# 'IPython.sphinxext.ipython_directive',
-				# 'IPython.sphinxext.ipython_console_highlighting',
-				'sphinx.ext.mathjax',
-				'sphinx.ext.autodoc',
-				'sphinx.ext.doctest',
-				'sphinx.ext.inheritance_diagram',
+              # 'matplotlib.sphinxext.only_directives',
+              # 'matplotlib.sphinxext.plot_directive',
+              # 'IPython.sphinxext.ipython_directive',
+              # 'IPython.sphinxext.ipython_console_highlighting',
+              'sphinx.ext.mathjax',
+              'sphinx.ext.autodoc',
+              'sphinx.ext.doctest',
+              'sphinx.ext.inheritance_diagram',
+              'sphinx.ext.napoleon',
               ]
 
 # Add any paths that contain templates here, relative to this directory.

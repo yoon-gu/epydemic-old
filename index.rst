@@ -6,6 +6,9 @@
 Welcome to epydemic's documentation!
 ====================================
 
+Epydemic
+--------
+
 .. automodule:: epydemic
    :members:
 
@@ -19,8 +22,6 @@ Contents:
 
 .. toctree::
    :maxdepth: 2
-
-
 
 Indices and tables
 ==================

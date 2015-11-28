@@ -9,11 +9,16 @@ def sir(gamma = 0.1, beta = 0.5):
 			S' &= -\beta S I \\
 			I' &= \beta S I - \gamma I \\
 			R' &= \gamma I
-		\end{align*}	
+		\end{align*}
+
+	Args:
+	    gamma (float): Description of gamma
+	    beta (float): Description of beta
+
 	"""
 	print "SIR Model"
 
-def seir(gamma = 0.1, beta = 0.5, mu = 0.2):
+def seir(gamma = 0.1, beta = 0.5, mu = 0.2, a = 1):
 	r"""
 	SEIR Model:
 
@@ -26,5 +31,22 @@ def seir(gamma = 0.1, beta = 0.5, mu = 0.2):
 			I' &= a E - (\gamma +\mu ) I \\
 			R' &= \gamma I  - \mu R
 		\end{align*}
+
+    Parameters
+    ----------
+    gamma : float
+        Description of gamma
+    beta : float
+        Description of beta
+    mu : float
+        Description of mu
+    a : float
+        Description of a
+
+    Returns
+    -------
+    bool
+        Description of return value
+
 	"""
 	print "SEIR Model"
