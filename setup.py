@@ -4,15 +4,16 @@ class BinaryDistribution(Distribution):
 	def is_pure(self):
 		return False
 
-setup(	name='epydemic', version='0.0',
+setup(	name='epydemic', version='0.1',
 		description='Mathematical Biology Package',
-		url='#',
-		author='Yoongu Hwang',
-		author_email='yoongu.hwang@gmail.com',
+		url='https://github.com/yoon-gu/epydemic/',
+		author='Jacob Hwang',
+		author_email='jacob@dnry.org',
 		license='MIT',
 		packages=find_packages(),
 		install_requires=[
 			'pyqtgraph',
+			'numpy',
 		],
 		include_package_data=True,
 		distclass=BinaryDistribution,
