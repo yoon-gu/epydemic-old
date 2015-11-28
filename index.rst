@@ -6,9 +6,6 @@
 Welcome to epydemic's documentation!
 ====================================
 
-Epydemic
---------
-
 .. automodule:: epydemic
    :members:
 
