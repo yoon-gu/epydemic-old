@@ -12,7 +12,7 @@ def sir(gamma = 0.1, beta = 0.5):
 		\end{align*}
 
 	Args:
-	    gamma (float): Description of gamma
+	    gamma (float): Description of :math: \gamma
 	    beta (float): Description of beta
 	
 	Example
