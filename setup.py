@@ -14,6 +14,7 @@ setup(	name='epydemic', version='0.1',
 		install_requires=[
 			'pyqtgraph',
 			'numpy',
+			'scipy',
 		],
 		include_package_data=True,
 		distclass=BinaryDistribution,
