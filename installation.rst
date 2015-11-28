@@ -22,21 +22,21 @@ http://thenilblog.blogspot.kr/2015/01/install-pyqt-on-yosemite.html
 
 #. Install SIP
 
-	* run ``download SIP``
+	* download SIP
 	* run ``python configure.py``
 	* run ``make``
 	* run ``sudo make install``
 
 #. Install PyQt4
 
-	* run ``download PyQt4``
+	* download PyQt4
 	* run ``python configure.py``
 	* run ``make``
 	* run ``sudo make install``
 
 #. Install pyqtgraph
 
-	* run ``Download pyqtgraph``
+	* download pyqtgraph
 	* run ``python setup.py install``
 
 #. Install pyopengl
