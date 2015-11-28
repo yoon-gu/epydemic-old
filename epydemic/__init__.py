@@ -1,6 +1,6 @@
 """
-Example
--------
+Epydemic Module
+---------------
 
 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil, illo provident temporibus. 
 Tenetur ad facere in optio, dignissimos minus necessitatibus nam quidem laboriosam itaque 

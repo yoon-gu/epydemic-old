@@ -9,7 +9,7 @@ Welcome to epydemic's documentation!
 .. automodule:: epydemic
    :members:
 
-.. automodule:: epydemic.models
+.. automodule:: epydemic.models(type)
    :members:
 
 .. automodule:: epydemic.epydemic_app

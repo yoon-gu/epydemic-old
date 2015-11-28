@@ -1,4 +1,4 @@
-def sir():
+def sir(gamma = 0.1, beta = 0.5):
 	r"""
 	SIR model: 
 
@@ -13,7 +13,7 @@ def sir():
 	"""
 	print "SIR Model"
 
-def seir():
+def seir(gamma = 0.1, beta = 0.5, mu = 0.2):
 	r"""
 	SEIR Model:
 
