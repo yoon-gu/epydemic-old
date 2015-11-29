@@ -1,26 +1,3 @@
-def sir(gamma = 0.1, beta = 0.5):
-    r"""
-    SIR model:
-
-    .. math::
-        :nowrap:
-
-        \begin{align*}
-            S' &= -\beta S I \\
-            I' &= \beta S I - \gamma I \\
-            R' &= \gamma I
-        \end{align*}
-
-    Args:
-        gamma (float): Description of gamma
-        beta (float): Description of beta
-
-    Example
-    -------
-    This is just a quick example.
-    """
-    print "SIR Model"
-
 def seir(gamma = 0.1, beta = 0.5, mu = 0.2, a = 1):
     r"""
     SEIR Model:
@@ -98,8 +75,45 @@ class model(object):
         # solve model
         t_start = 0.0; t_end = 10; t_inc = 1
         t_range = arange(t_start, t_end + t_inc, t_inc)
-        RES = odeint(diff_eqs, self.initial_value, t_range, args = (self.parameter, ))
-        return RES
+        self.sol = odeint(self.equation, self.initial_value, t_range, args = (self.parameter, ))
+        return self.sol
+
+class sir(model):
+    r"""
+    SIR model:
+
+    .. math::
+        :nowrap:
+
+        \begin{align*}
+            S' &= -\beta S I \\
+            I' &= \beta S I - \gamma I \\
+            R' &= \gamma I
+        \end{align*}
+
+    Args:
+        gamma (float): Description of gamma
+        beta (float): Description of beta
+
+    Example
+    -------
+    This is just a quick example.
+    """
+
+    def diff_eqs(self, INP, t, params):
+        from numpy import arange, zeros
+        beta = params['beta']
+        gamma = params['gamma']
+        Y = zeros((3))
+        V = INP
+        Y[0] = - beta * V[0] * V[1]
+        Y[1] = beta * V[0] * V[1] - gamma * V[1]
+        Y[2] = gamma * V[1]
+        return Y   # For odeint
+
+    def __init__(self):
+        super(sir, self).__init__(self.diff_eqs)
+        
 
 if __name__ == '__main__':
     # parameters for each model
@@ -112,22 +126,7 @@ if __name__ == '__main__':
     # time range(step, end)
     TS, ND = 1, 10
 
-    # the model
-    def diff_eqs(INP, t, params):
-        from numpy import arange, zeros
-        beta = params['beta']
-        gamma = params['gamma']
-        Y = zeros((3))
-        V = INP
-        Y[0] = - beta * V[0] * V[1]
-        Y[1] = beta * V[0] * V[1] - gamma * V[1]
-        Y[2] = gamma * V[1]
-        return Y   # For odeint
-
-    md = model(diff_eqs)
+    md = sir()
     md.set_parameters(parameter)
     md.set_initial_values(INPUT)
-
-    print md.parameter
-    print md.initial_value
     print md.solve()
