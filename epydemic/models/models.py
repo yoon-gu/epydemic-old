@@ -1,11 +1,11 @@
 def sir(gamma = 0.1, beta = 0.5):
     r"""
-    SIR model: 
+    SIR model:
 
     .. math::
         :nowrap:
 
-        \begin{align*} 
+        \begin{align*}
             S' &= -\beta S I \\
             I' &= \beta S I - \gamma I \\
             R' &= \gamma I
@@ -14,7 +14,7 @@ def sir(gamma = 0.1, beta = 0.5):
     Args:
         gamma (float): Description of gamma
         beta (float): Description of beta
-    
+
     Example
     -------
     This is just a quick example.
@@ -27,7 +27,7 @@ def seir(gamma = 0.1, beta = 0.5, mu = 0.2, a = 1):
 
     .. math::
         :nowrap:
-        
+
         \begin{align*}
             S' &= \mu N - \mu S - \beta \frac{I}{N} S \\
             E' &= \beta \frac{I}{N} S - (\mu +a ) E \\
@@ -63,7 +63,7 @@ class model(object):
 
     Example
     -------
-    loem 
+    loem
 
     Parameters
     ----------
@@ -95,7 +95,7 @@ class model(object):
         self.initial_value = init_val
 
     def solve(self):
-        # solve model    
+        # solve model
         t_start = 0.0; t_end = 10; t_inc = 1
         t_range = arange(t_start, t_end + t_inc, t_inc)
         RES = odeint(diff_eqs, self.initial_value, t_range, args = (self.parameter, ))
@@ -111,7 +111,7 @@ if __name__ == '__main__':
 
     # time range(step, end)
     TS, ND = 1, 10
-    
+
     # the model
     def diff_eqs(INP, t, params):
         from numpy import arange, zeros
