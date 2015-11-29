@@ -98,13 +98,13 @@ class model(object):
         # solve model    
         t_start = 0.0; t_end = 10; t_inc = 1
         t_range = arange(t_start, t_end + t_inc, t_inc)
-        RES = odeint(diff_eqs, self.initial_value, t_range)
+        RES = odeint(diff_eqs, self.initial_value, t_range, args = (self.parameter, ))
         return RES
 
 if __name__ == '__main__':
     # parameters for each model
-    beta, gamma = 1.42, 0.143
-    parameter = {'beta' : beta, 'gamma' : gamma}
+    parameter = {'beta' : 1.42, 'gamma' : 0.143}
+
     # initial values for each model
     S0, I0, R0 = 1.0 - 1.0e-6, 1.0e-6, 0.0
     INPUT = (S0, I0, R0)
@@ -113,9 +113,10 @@ if __name__ == '__main__':
     TS, ND = 1, 10
     
     # the model
-    def diff_eqs(INP,t):
+    def diff_eqs(INP, t, params):
         from numpy import arange, zeros
-        '''The main set of equations'''
+        beta = params['beta']
+        gamma = params['gamma']
         Y = zeros((3))
         V = INP
         Y[0] = - beta * V[0] * V[1]
