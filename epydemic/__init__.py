@@ -2,18 +2,11 @@
 Epydemic Module
 ===============
 
-Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil, illo provident temporibus. 
-Tenetur ad facere in optio, dignissimos minus necessitatibus nam quidem laboriosam itaque 
-inventore doloribus dolor perferendis cupiditate nobis.
+``epydemic`` is a software package written by ``Python`` for mathematical epidemic modeling. There are three submodules.
 
-* Lorem ipsum dolor.
-* Lorem ipsum dolor.
-* Lorem ipsum dolor.
-* Lorem ipsum dolor.
-
-This module demonstrates documentation as specified by the ``NumPy
-Documentation HOWTO``. Docstrings may extend over multiple lines. Sections
-are created with a section header followed by an underline of equal length.
+* ``models`` contains epidemic modeling ordinary differential equation(ODE).
+* ``estimations`` performs parameter estimations given real world data.
+* ``controls`` solves optimal a control problem.
 
 Example
 -------
