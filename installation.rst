@@ -7,7 +7,8 @@ Installation
 
 Windows
 -------
-TBA
+Install WinPython 2.7
+~~~~~~~~~~~~~~~~~~~~~
 
 Mac OS X(Unofficial)
 --------------------
