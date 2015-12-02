@@ -14,7 +14,7 @@ Install WinPython 2.7
 Mac OS X(Unofficial)
 --------------------
 
-.. warning:: This support is `unofficial`.
+.. warning:: This `unofficial` version.
 
 * http://thenilblog.blogspot.kr/2015/01/install-pyqt-on-yosemite.html
 
