@@ -97,9 +97,6 @@ class sir(model):
 
     Example
     -------
-    Examples can be given using either the ``Example`` or ``Examples``
-    sections. Sections support any reStructuredText formatting, including
-    literal blocks::
 
         # parameters for each model
         parameter = {'beta' : 1.42, 'gamma' : 0.143}
