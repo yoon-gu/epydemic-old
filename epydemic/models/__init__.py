@@ -9,9 +9,6 @@ There are two types model `class`es.
 
 Built-in Models
 ---------------
-* SIR
-* SEIR
-
 """
 
 __all__ = ['sir', 'seir', 'model']
