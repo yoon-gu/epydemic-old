@@ -87,13 +87,15 @@ class sir(model):
             R' &= \gamma I
         \end{align*}
 
-    Args:
+    Parameters
+    ----------
         gamma (float): Description of gamma
         beta (float): Description of beta
 
     Example
     -------
-    `sir`, one of built-in model, can be used as the following.
+    ``sir``, one of built-in model, can be used as the following.
+    ::
 
         # parameters for each model
         parameter = {'beta' : 1.42, 'gamma' : 0.143}

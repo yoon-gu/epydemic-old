@@ -12,14 +12,14 @@ Example
 -------
 Examples can be given using either the ``Example`` or ``Examples``
 sections. Sections support any reStructuredText formatting, including
-literal blocks::
+literal blocks.
 
     $ python example_numpy.py
 
 
 Section breaks are created with two blank lines. Section breaks are also
 implicitly created anytime a new section starts. Section bodies *may* be
-indented:
+indented.
 
 Notes
 -----
