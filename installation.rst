@@ -11,6 +11,17 @@ Install WinPython 2.7
 ~~~~~~~~~~~~~~~~~~~~~
 * http://winpython.sourceforge.net
 
+Install pyqtgraph
+~~~~~~~~~~~~~~~~~
+
+* download pyqtgraph
+* run ``python setup.py install``
+
+Install pyopengl
+~~~~~~~~~~~~~~~~
+
+* run ``pip install pyopengl``
+
 Mac OS X(Unofficial)
 --------------------
 
