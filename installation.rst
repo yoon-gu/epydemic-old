@@ -10,9 +10,14 @@ Windows
 Install WinPython 2.7
 ~~~~~~~~~~~~~~~~~~~~~
 * http://winpython.sourceforge.net
+* Don't forget to register your Winpython. (Winpython Control Panel -> Register)
 
 Install pyqtgraph
 ~~~~~~~~~~~~~~~~~
+
+* download binary installation for Windows and execute for installation.
+
+or
 
 * download pyqtgraph
 * run ``python setup.py install``
