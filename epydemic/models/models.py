@@ -89,8 +89,10 @@ class sir(model):
 
     Parameters
     ----------
-        gamma (float): Description of gamma
-        beta (float): Description of beta
+    gamma : float
+        Description of gamma
+    beta : float
+        Description of beta
 
     Example
     -------
