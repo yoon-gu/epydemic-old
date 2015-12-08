@@ -38,10 +38,6 @@ class model(object):
     r"""
     This is just a quick example for a model.
 
-    Example
-    -------
-    loem
-
     Parameters
     ----------
     gamma : float
