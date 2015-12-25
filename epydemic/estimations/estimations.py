@@ -8,8 +8,12 @@ class ols(object):
 		self.model = model
 		self.cost_func = cost_func
 
-	def estimate(self):
-		pass
+	def estimate(self, initial_value, Y):
+		L = self.cost_func
+		theta0 = initial_value
+		theta_ols = scipy.optimize.fmin(func=L, x0=theta0, args=(Y,))
+		self.estimated = theta_ols
+		return theta_ols
 
 def gls():
 	"""
