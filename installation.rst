@@ -34,6 +34,12 @@ Mac OS X(Unofficial)
 
 * http://thenilblog.blogspot.kr/2015/01/install-pyqt-on-yosemite.html
 
+Install HomeBrew
+~~~~~~~~~~~~~~~~
+
+* `ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"`
+* `brew update`
+
 Install Qt
 ~~~~~~~~~~
 

@@ -69,7 +69,9 @@ class model(object):
 
     def solve(self):
         # solve model
-        t_start = 0.0; t_end = 10; t_inc = 1
+        t_start = self.parameter['start']
+        t_end = self.parameter['end']
+        t_inc = self.parameter['dt']
         t_range = arange(t_start, t_end + t_inc, t_inc)
         self.sol = odeint(self.equation, self.initial_value, t_range, args = (self.parameter, ))
         return self.sol
@@ -144,14 +146,11 @@ class sir(model):
 
 if __name__ == '__main__':
     # parameters for each model
-    parameter = {'beta' : 1.42, 'gamma' : 0.143}
+    parameter = {'beta' : 1.42, 'gamma' : 0.143, 'dt':1, 'start':0, 'end':10}
 
     # initial values for each model
     S0, I0, R0 = 1.0 - 1.0e-6, 1.0e-6, 0.0
     Initial = (S0, I0, R0)
-
-    # time range(step, end)
-    TS, ND = 1, 10
 
     md = sir()
     md.set_parameters(parameter)
