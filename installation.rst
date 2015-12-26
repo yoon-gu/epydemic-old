@@ -37,8 +37,8 @@ Mac OS X(Unofficial)
 Install HomeBrew
 ~~~~~~~~~~~~~~~~
 
-* `ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"`
-* `brew update`
+* run ``ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"``
+* run ``brew update``
 
 Install Qt
 ~~~~~~~~~~
