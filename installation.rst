@@ -30,7 +30,7 @@ Install pyopengl
 Mac OS X(Unofficial)
 --------------------
 
-.. warning:: This `unofficial` version.
+.. warning:: `Unofficial` version.
 
 * http://thenilblog.blogspot.kr/2015/01/install-pyqt-on-yosemite.html
 
