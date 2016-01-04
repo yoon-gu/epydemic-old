@@ -45,10 +45,8 @@ Y = Z + c * randn(n)
 theta0 = 1.25 * theta
 
 # Estimating parameter
-def L(theta, Y):
-    n = 1000
+def L(theta, timep, Y):
     initial = (theta[0], theta[1], 0.)
-    timep = linspace(0, 14, n+1)
     sol = odeint(sir, initial, timep,
         args = ({'beta':theta[2], 'gamma':theta[3]}, ))
     S, I = sol[:,0], sol[:,1]
@@ -56,6 +54,6 @@ def L(theta, Y):
     Z = 0.5 * ( timep[1:] - timep[:-1] ) * beta * ( SI[:-1] + SI[1:] )
     return LA.norm(Z - Y)
 
-theta_ols = scipy.optimize.fmin(func=L, x0=theta0, args=(Y,))
+theta_ols = scipy.optimize.fmin(func=L, x0=theta0, args=(timep, Y,))
 
 print theta_ols
