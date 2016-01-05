@@ -36,11 +36,11 @@ t_inc = 0.014
 t_range = arange(t_start, t_end + t_inc, t_inc)
 
 parameter = {
-        'beta' : 5e-6, 
-        'gamma' : 5e-1, 
-        'S0' : 3.5e5, 
-        'I0' : 9e1, 
-        'R0' : 0., 
+        'beta' : beta, 
+        'gamma' : gamma, 
+        'S0' : S0, 
+        'I0' : I0,
+        'R0' : R0, 
         't_range' : t_range, 
         }
 
