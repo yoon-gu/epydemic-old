@@ -54,7 +54,7 @@ I0 = 9e1
 R0 = 0.
 t_start = 0
 t_end = 14
-t_inc = 0.5
+t_inc = 0.14
 t_range = arange(t_start, t_end + t_inc, t_inc)
 
 parameter = {
@@ -101,7 +101,7 @@ while (itcnt_out < maxit_out) and (test < 0):
     parameter['beta'] = theta_gls[2]
     parameter['gamma'] = theta_gls[3]
     Z, weight = compute_zw(parameter, sir)
-    
+
     print itcnt_out, theta_gls
 
     temp = [tol * sum(abs(theta_gls[0])) - sum(abs(theta_est[0] - theta_gls[0])), 
@@ -109,3 +109,14 @@ while (itcnt_out < maxit_out) and (test < 0):
             tol * sum(abs(theta_gls[2])) - sum(abs(theta_est[2] - theta_gls[2])), 
             tol * sum(abs(theta_gls[3])) - sum(abs(theta_est[3] - theta_gls[3])), ]
     test = min(temp)
+
+import matplotlib.pyplot as plt
+S, I = sol[:,0], sol[:,1]
+SI = S * I
+beta = theta_gls[2]
+Z = 0.5 * t_inc * beta * ( SI[:-1] + SI[1:] )
+plt.plot(t_range[:-1], Y, 's', color='gray')
+plt.plot(t_range[:-1], Z, 'k')
+plt.ylabel('Number of cases')
+plt.xlabel('Time')
+plt.show()
