@@ -114,9 +114,17 @@ import matplotlib.pyplot as plt
 S, I = sol[:,0], sol[:,1]
 SI = S * I
 beta = theta_gls[2]
-Z = 0.5 * t_inc * beta * ( SI[:-1] + SI[1:] )
+incidence = 0.5 * t_inc * beta * ( SI[:-1] + SI[1:] )
 plt.plot(t_range[:-1], Y, 's', color='gray')
-plt.plot(t_range[:-1], Z, 'k')
+plt.plot(t_range[:-1], incidence, 'k')
 plt.ylabel('Number of cases')
 plt.xlabel('Time')
+
+f, (ax1, ax2) = plt.subplots(1, 2, sharey=True)
+ax1.plot(incidence, (Y-incidence) / incidence, 'o')
+ax1.set_xlabel('Model')
+ax1.set_ylabel('Residual')
+ax2.plot(t_range[:-1], (Y-incidence) / incidence, 'o')
+ax2.set_xlabel('Time')
+ax2.set_ylabel('Residual')
 plt.show()
