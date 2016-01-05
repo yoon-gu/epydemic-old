@@ -54,7 +54,7 @@ I0 = 9e1
 R0 = 0.
 t_start = 0
 t_end = 14
-t_inc = 0.14
+t_inc = 0.014
 t_range = arange(t_start, t_end + t_inc, t_inc)
 
 parameter = {
@@ -127,4 +127,10 @@ ax1.set_ylabel('Residual')
 ax2.plot(t_range[:-1], (Y-incidence) / incidence, 'o')
 ax2.set_xlabel('Time')
 ax2.set_ylabel('Residual')
+
+plt.figure()
+R_gls = theta_gls[2] * S / theta_gls[3]
+plt.plot(t_range, R_gls, 'k')
+plt.xlabel('Time')
+plt.ylabel('R(t) Sample')
 plt.show()
