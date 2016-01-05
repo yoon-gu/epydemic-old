@@ -32,7 +32,7 @@ I0 = 9e1
 R0 = 0.
 t_start = 0
 t_end = 14
-t_inc = 0.5
+t_inc = 0.014
 t_range = arange(t_start, t_end + t_inc, t_inc)
 
 parameter = {
@@ -65,3 +65,23 @@ theta0 = 1.25 * theta
 theta_ols = scipy.optimize.fmin(func=ols_cost, x0=theta0, args=(t_range, Y,))
 
 print theta_ols
+
+import matplotlib.pyplot as plt
+S, I = sol[:,0], sol[:,1]
+SI = S * I
+beta = theta_ols[2]
+incidence = 0.5 * t_inc * beta * ( SI[:-1] + SI[1:] )
+plt.plot(t_range[:-1], Y, 's', color='gray')
+plt.plot(t_range[:-1], incidence, 'k')
+plt.ylabel('Number of cases')
+plt.xlabel('Time')
+
+f, (ax1, ax2) = plt.subplots(1, 2, sharey=True)
+ax1.plot(incidence, (Y-incidence) / incidence, 'o')
+ax1.set_xlabel('Model')
+ax1.set_ylabel('Residual')
+ax2.plot(t_range[:-1], (Y-incidence) / incidence, 'o')
+ax2.set_xlabel('Time')
+ax2.set_ylabel('Residual')
+plt.ylim(ymax=50, ymin=-50)
+plt.show()

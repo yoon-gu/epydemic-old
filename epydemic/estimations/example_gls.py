@@ -110,6 +110,7 @@ while (itcnt_out < maxit_out) and (test < 0):
             tol * sum(abs(theta_gls[3])) - sum(abs(theta_est[3] - theta_gls[3])), ]
     test = min(temp)
 
+# Plots
 import matplotlib.pyplot as plt
 S, I = sol[:,0], sol[:,1]
 SI = S * I
