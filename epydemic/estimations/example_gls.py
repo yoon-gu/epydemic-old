@@ -95,10 +95,14 @@ while (itcnt_out < maxit_out) and (test < 0):
     itcnt_out += 1
     theta_est = theta_gls
 
-    # theta_gls  = fminsearch(@LW,theta_gls,[],Y,weight)
     theta_gls = scipy.optimize.fmin(func=gls_cost, x0=theta_gls, args=(t_range, Y, weight))
+    parameter['S0'] = theta_gls[0]
+    parameter['I0'] = theta_gls[1]
+    parameter['beta'] = theta_gls[2]
+    parameter['gamma'] = theta_gls[3]
     Z, weight = compute_zw(parameter, sir)
-    print theta_gls
+    
+    print itcnt_out, theta_gls
 
     temp = [tol * sum(abs(theta_gls[0])) - sum(abs(theta_est[0] - theta_gls[0])), 
             tol * sum(abs(theta_gls[1])) - sum(abs(theta_est[1] - theta_gls[1])), 
