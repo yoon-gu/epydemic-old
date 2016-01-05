@@ -104,10 +104,7 @@ while (itcnt_out < maxit_out) and (test < 0):
 
     print itcnt_out, theta_gls
 
-    temp = [tol * sum(abs(theta_gls[0])) - sum(abs(theta_est[0] - theta_gls[0])), 
-            tol * sum(abs(theta_gls[1])) - sum(abs(theta_est[1] - theta_gls[1])), 
-            tol * sum(abs(theta_gls[2])) - sum(abs(theta_est[2] - theta_gls[2])), 
-            tol * sum(abs(theta_gls[3])) - sum(abs(theta_est[3] - theta_gls[3])), ]
+    temp = tol * abs(theta_gls) - abs(theta_est - theta_gls)
     test = min(temp)
 
 # Plots
